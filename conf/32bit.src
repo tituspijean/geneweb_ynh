@@ -1,0 +1,6 @@
+SOURCE_URL=https://github.com/geneweb/geneweb/releases/download/v6.08/gw-6.08-linux.tgz
+SOURCE_SUM=f0102cda1bfa69bcd6327bfb34858df5
+SOURCE_SUM_PRG=md5sum
+SOURCE_FORMAT=tar.gz
+SOURCE_IN_SUBDIR=true
+SOURCE_FILENAME=

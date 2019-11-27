@@ -1,0 +1,56 @@
+{
+    "name": "GeneWeb",
+    "id": "geneweb",
+    "packaging_format": 1,
+    "description": {
+        "en": "Free open source genealogy software",
+        "fr": "Logiciel de généalogie libre et gratuit"
+    },
+    "version": "6.08~ynh1",
+    "url": "https://geneweb.tuxfamily.org",
+    "license": "AGPL-3.0",
+    "maintainer": {
+        "name": "tituspijean",
+        "email": "tituspijean@outlook.com"
+    },
+    "requirements": {
+        "yunohost": ">= 3.5"
+    },
+    "multi_instance": true,
+    "services": [
+        "nginx",
+        "php7.0-fpm"
+    ],
+    "arguments": {
+        "install" : [
+            {
+                "name": "domain",
+                "type": "domain",
+                "ask": {
+                    "en": "Choose a domain name for ynhexample",
+                    "fr": "Choisissez un nom de domaine pour ynhexample"
+                },
+                "example": "example.com"
+            },
+            {
+                "name": "is_public",
+                "type": "boolean",
+                "ask": {
+                    "en": "Is it a public application?",
+                    "fr": "Est-ce une application publique ?"
+                },
+                "default": true
+            },
+            {
+                "name": "language",
+                "type": "string",
+                "ask": {
+                    "en": "Choose the application language",
+                    "fr": "Choisissez la langue de l'application"
+                },
+                "choices": ["fr", "en"],
+                "default": "fr"
+            }
+        ]
+    }
+}

@@ -1,0 +1,13 @@
+[Unit]
+Description=__APP__ gwd server
+After=network.target
+
+[Service]
+Type=simple
+User=__APP__
+Group=__APP__
+WorkingDirectory=__FINALPATH__/
+ExecStart=/bin/sh -c '__FINALPATH__/gwd -p __PORT_GWD__ -lang __LANG__ -daemon' >> /var/log/__APP__/__APP__-gwd.log 2>&1
+
+[Install]
+WantedBy=multi-user.target

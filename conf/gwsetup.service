@@ -1,0 +1,13 @@
+[Unit]
+Description=__APP__ gwsetup server
+After=network.target
+
+[Service]
+Type=simple
+User=__APP__
+Group=__APP__
+WorkingDirectory=__FINALPATH__/
+ExecStart=/bin/sh -c '__FINALPATH__/gwsetup -p __PORT_GWSETUP__ -lang __LANG__ -gd __FINALPATH__/gw -daemon' >> /var/log/__APP__/__APP___gwsetup.log 2>&1
+
+[Install]
+WantedBy=multi-user.target
